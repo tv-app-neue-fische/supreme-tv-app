@@ -1,6 +1,6 @@
 import './app.scss';
 import { title } from './components/header';
-import { createElement } from './lib/dom';
+import { createElement, appendContent } from './lib/dom';
 import Logo from './assets/logotv.svg';
 import { searchBar } from './components/search';
 //import { shows } from './components/momvies';
@@ -12,8 +12,8 @@ export function app() {
   const logo = createElement('img', { className: 'logo', src: Logo });
   const searchElement = searchBar();
 
-  header.appendChild(logo);
-  header.appendChild(titleElement);
-  main.appendChild(searchElement);
+  appendContent(header, [logo, titleElement]);
+  appendContent(main, searchElement);
+
   return [header, main];
 }

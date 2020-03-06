@@ -5,3 +5,12 @@ export function createElement(tagName, attributes = {}) {
   });
   return element;
 }
+export function appendContent(parent, content) {
+  if (Array.isArray(content)) {
+    content.forEach(element => {
+      parent.appendChild(element);
+    });
+  } else {
+    parent.appendChild(content);
+  }
+}
