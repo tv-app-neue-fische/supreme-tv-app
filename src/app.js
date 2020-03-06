@@ -3,6 +3,7 @@ import { title } from './components/header';
 import { createElement, appendContent } from './lib/dom';
 import Logo from './assets/logotv.svg';
 import { searchBar } from './components/search';
+//import { shows } from './components/momvies';
 
 export function app() {
   const header = createElement('header', { className: 'header' });
