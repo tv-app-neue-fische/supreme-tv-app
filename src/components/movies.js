@@ -1,5 +1,5 @@
 import './movies.scss';
-import { createElement } from '../lib/dom';
+import { createElement, appendContent } from '../lib/dom';
 
 export function shows(items) {
   const showContainer = createElement('div', {
@@ -10,7 +10,7 @@ export function shows(items) {
       innertext: item,
       className: 'tvShow'
     });
-    showContainer.appendChild(element);
+    appendContent(showContainer, element);
   });
   return showContainer;
 }
