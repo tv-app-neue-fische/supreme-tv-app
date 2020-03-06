@@ -6,12 +6,13 @@
 
 body {
   display: flex;
+  flex-flow: column nowrap;
   margin: 0;
   height: 100vh;
   font-size: 16px;
   background-image: linear-gradient(
     to bottom right,
-    rgb(116, 116, 173),
-    rgb(84, 128, 101)
+    rgb(180, 180, 219),
+    rgb(133, 156, 142)
   );
 }

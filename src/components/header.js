@@ -1,3 +1,5 @@
+import './header.scss';
+
 import { createElement } from '../lib/dom';
 
 export function title(text) {
