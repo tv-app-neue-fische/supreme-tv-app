@@ -1,5 +1,5 @@
 import './favorites.scss';
-import { createElement } from '../lib/dom';
+import { createElement, appendContent } from '../lib/dom';
 
 export function favorites(items) {
   const favoritesContainer = createElement('div', {
@@ -10,7 +10,7 @@ export function favorites(items) {
       innertext: item,
       className: 'favoriteTvShows'
     });
-    favoritesContainer.appendChild(element);
+    appendContent(favoritesContainer, element);
   });
   return favoritesContainer;
 }
