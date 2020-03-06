@@ -1,7 +1,7 @@
 import './movies.scss';
 import { createElement, appendContent } from '../lib/dom';
 
-export function shows(items) {
+export function createShows(items) {
   const showContainer = createElement('div', {
     className: 'shows'
   });
