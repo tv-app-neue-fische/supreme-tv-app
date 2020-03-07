@@ -29,7 +29,7 @@ export function app() {
     appendContent(main, searchResults);
   }
 
-  // setSearchResults();
+  setSearchResults();
 
   searchElement.firstElementChild.addEventListener('input', event => {
     if (searchResults) {
