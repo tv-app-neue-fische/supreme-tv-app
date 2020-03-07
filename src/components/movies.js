@@ -1,13 +1,14 @@
 import './movies.scss';
 import { createElement, appendContent } from '../lib/dom';
 
-export function createShows(items) {
+export function createShows(props) {
   const showContainer = createElement('div', {
     className: 'shows'
   });
-  items.forEach(item => {
+
+  props.items.forEach(item => {
     const element = createElement('div', {
-      innertext: item,
+      innerText: item,
       className: 'tvShow'
     });
     appendContent(showContainer, element);

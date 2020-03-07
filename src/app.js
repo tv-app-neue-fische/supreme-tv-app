@@ -20,14 +20,21 @@ export function app() {
 
   let searchResults = null;
   async function setSearchResults() {
-    const filteredShows = await getTvShows(searchElement.value);
+    const filteredShows = await getTvShows(
+      searchElement.firstElementChild.value
+    );
+
     searchResults = createShows({ items: filteredShows });
+    console.log(searchResults);
     appendContent(main, searchResults);
   }
 
-  setSearchResults();
-  searchElement.addEventListener('input', event => {
-    main.removeChild(searchResults);
+  // setSearchResults();
+
+  searchElement.firstElementChild.addEventListener('input', event => {
+    if (searchResults) {
+      main.removeChild(searchResults);
+    }
     setSearchResults();
 
     const searchValue = event.target.value;

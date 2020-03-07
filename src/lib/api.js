@@ -4,5 +4,10 @@ export async function getTvShows(searchInputValue) {
     `https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&language=en-US&query=${searchInputValue}`
   );
   const data = await response.json();
-  return data.results;
+  const filteredShows = data.results;
+  const showNames = filteredShows.map(show => {
+    return show.name;
+  });
+
+  return showNames;
 }
